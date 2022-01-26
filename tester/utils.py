@@ -5,10 +5,17 @@ Author: Tom Kuipers
 """
 
 
-def check_nrow_ncol():
+def check_code(regex):
     import inspect
     import re
-    local_vars = inspect.currentframe().f_back.f_locals
-    nrow_match = len(re.findall("nrow\\s*=\\s*2", str(local_vars))) == 0
-    ncol_match = len(re.findall("ncol\\s*=\\s*3", str(local_vars))) == 0
-    return nrow_match and ncol_match
+    local_vars = str(inspect.currentframe().f_back.f_back.f_locals)
+    no_match = len(re.findall(regex, local_vars)) == 0
+    return no_match
+
+
+def check_nrow_ncol():
+    return (check_code(r"nrow\s*=\s*5") and check_code(r"ncol\s*=\s*3"))
+
+
+def check_rot_inv():
+    return not check_code(r"R1m\s*=\s*R1\.t[^b-m]{3}[^a-o, w-z]{2}o[se]{2}\(\)")

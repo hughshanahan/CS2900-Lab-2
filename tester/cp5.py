@@ -32,7 +32,7 @@ test = {
                     'code': r"""
                     >>> # We're expecting a vector here, not a matrix.
                     >>> # Check you are multiplying R and x correctly.
-                    >>> Rx(R, x)).shape[1] == 1
+                    >>> Rx(R, x).shape == (3,)
                     True
                     """
                 },

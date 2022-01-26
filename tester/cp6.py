@@ -24,7 +24,7 @@ test = {
                     'code': r"""
                     >>> # Your function does not return anything!
                     >>> # Make sure you put a return statement at the bottom of the function.
-                    >>> compare(x, y) is None
+                    >>> compare(x, y, R1) is None
                     False
                     """
                 },
@@ -32,7 +32,7 @@ test = {
                     'code': r"""
                     >>> # We're expecting a Python tuple here! 
                     >>> # Your function returns a list or Numpy array...
-                    >>> type(compare(x, y)).__name__ not in ['list', 'ndarray']
+                    >>> type(compare(x, y, R1)).__name__ not in ['list', 'ndarray']
                     True
                     """
                 },
@@ -40,7 +40,7 @@ test = {
                     'code': r"""
                     >>> # We're expecting a tuple here!
                     >>> # Your function returns something else entirely...
-                    >>> type(compare(x, y)).__name__ == 'tuple'
+                    >>> type(compare(x, y, R1)).__name__ == 'tuple'
                     True
                     """
                 },
@@ -57,7 +57,7 @@ test = {
                     >>> # Your vector y is wrong by at least 0.001.
                     >>> # Print out what your function calculated and compare it with
                     >>> # what you have worked out on paper.
-                    >>> np.allclose(np.array(compare(x, y)), np.array([1.732, 1.732, 1, 1]), atol=10**-3, rtol=0)
+                    >>> np.allclose(np.array(compare(x, y, R1)), np.array([1.732, 1.732, 1, 1]), atol=10**-3, rtol=0)
                     True
                     """
                 }
