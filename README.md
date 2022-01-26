@@ -6,12 +6,16 @@ Please click on the launch Binder icon below.
 
 It will take a few minutes to launch....
 
-When it launches you should get the following
+When it launches you should get the following:
 
-![alt text](https://github.com/hughshanahan/CS2900-Lab-2/blob/master/Screenshot%202019-01-30%20at%2017.17.14.png)
+![alt text](https://github.com/hughshanahan/CS2900-Lab-2/blob/master/config/binder_loading.png)
 
-Click on the file "Lab 2.ipynb". This should create a new tab with the following. 
+Once it has loaded, you will be greeted by this screen:
 
-![alt text](https://github.com/hughshanahan/CS2900-Lab-2/blob/master/Screenshot%202019-01-30%20at%2017.26.08.png)
+![alt text](https://github.com/hughshanahan/CS2900-Lab-2/blob/master/config/binder_dashboard.png)
+
+Double-click on the file "Lab2.ipynb". This should create a new tab with the following:
+
+![alt text](https://github.com/hughshanahan/CS2900-Lab-2/blob/master/config/loaded_notebook.png)
 
 Follow the instructions from there...
