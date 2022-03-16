@@ -30,16 +30,6 @@ test = {
                 },
                 {
                     'code': r"""
-                    >>> # You should NOT be manually setting nrow or ncol!
-                    >>> # You need to set them using A.shape!
-                    >>> # You must restart your kernel now.
-                    >>> from tester.utils import check_nrow_ncol
-                    >>> check_nrow_ncol()
-                    True
-                    """
-                },
-                {
-                    'code': r"""
                     >>> # Your nrow seems to be the number of columns.
                     >>> # Check you're getting the right element of the shape array.
                     >>> nrow != 3
@@ -59,6 +49,17 @@ test = {
                     >>> # The values for nrow and ncol are incorrect.
                     >>> # You should be using A.shape to determine these.
                     >>> (nrow == 5) and (ncol == 3)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # You haven't used the 'shape' function from above.
+                    >>> # Instead you seem to have set them manually.
+                    >>> # Whilst your values are correct, this wasn't the way to do it.
+                    >>> # Try to do it using the shape function.
+                    >>> from tester.utils import check_nrow_ncol
+                    >>> check_nrow_ncol()
                     True
                     """
                 }

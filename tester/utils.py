@@ -18,4 +18,4 @@ def check_nrow_ncol():
 
 
 def check_rot_inv():
-    return not check_code(r"R1m\s*=\s*R1\.t[^b-m]{3}[^a-o, w-z]{2}o[se]{2}\(\)")
+    return not (check_code(r"R1m\s*=\s*R1\.t[^b-m]{3}[^a-o, w-z]{2}o[se]{2}\(\)") and check_code(r"R1m\s*=\s*np\.t[^b-m]{3}[^a-o, w-z]{2}o[se]{2}\(R1\)"))
