@@ -1,17 +1,46 @@
 # CS2900 Lab 2
 
-Please click on the launch Binder icon below. 
+## Running in NoMachine
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hughshanahan/CS2900-Lab-2/master)
+You can run Jupyter directly from the department server:
 
-It will take a few minutes to launch....
+- First run the following command
+```
+git clone git@github.com:hughshanahan/CS2900-Lab-2.git
+```
+to clone the repository and `cd` into the repository folder.
 
-When it launches you should get the following
+- Then run 
+```
+jupyter notebook
+``` 
+to launch the notebook in the browser.
 
-![alt text](https://github.com/hughshanahan/CS2900-Lab-2/blob/2b22c8e4379d60c2a97a946b8fd6cc6afa6d17e5/config/binder_dashboard.png)
+You may have to copy and paste a URL from the output on the command line to the browser. 
 
-Click on the file "Lab 2.ipynb". This should create a new tab with the following. 
+![Example output to be copied from running jupyter notebook](https://github.com/hughshanahan/CS2900-Lab-1/blob/master/config/CommandLineOutput.png)
 
-![alt text](https://github.com/KuipersT/CS2900-Lab-2/blob/ae2012b24d40e58975db5918a4676efea81e7317/config/loaded_notebook.png)
+![Paste to browser bar](https://github.com/hughshanahan/CS2900-Lab-1/blob/master/config/PasteToBrowser.png)
+
+Once it has loaded, you be greeted with this screen:
+
+![Image of Binder dashboard](https://github.com/hughshanahan/CS2900-Lab-1/blob/master/config/JupyterLaunchPage.png)
+
+Double-click on the file "Lab2.ipynb". This should create a new tab with something like this:
+
+![Image of Jupyter notebook](https://github.com/hughshanahan/CS2900-Lab-1/blob/master/config/loaded_notebook.png)
 
 Follow the instructions from there...
+
+## Running on your own machine
+
+Finally, you can also run Jupyter from your own computer. Instructions on
+this can be found at
+<a href="https://jupyter.org/install" class="uri">https://jupyter.org/install</a>. If you do not have it you, 
+<a href="https://docs.anaconda.com/anaconda/install/" class="uri"> Anaconda </a> is a handy tool to download Python and Jupyter in one bundle.
+
+You will need to clone the repository as above, and then launch your conda 
+environment and install the packages in the `requirements.txt` folder. 
+The main ones you will need are `numpy` and `matplotlib`.
+
+Make sure these are installed before starting the notebook!
